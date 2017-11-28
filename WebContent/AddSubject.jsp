@@ -7,24 +7,24 @@
 </head>
 <body>
 	<div>
-		<h1 style="border:2px solid red;text-align:center">Add Subject Details</h1>
+		<h1 style="border:2px solid red;text-align:center;background:pink">Add Subject Details</h1>
 	</div>
 	<form method="get"action="AddSubject">
 		 <table style="color:red">
 			<tr>
-				<td><h3>Course Code</h3></td>
-				<td><input type="text" name="coursecode"></td>
+				<td><h2>Course Code</h2></td>
+				<td><input type="text" name="coursecode" required autofocus></td>
 			</tr>
 			<tr>
-				<td><h3>Course Name</h3></td>
-				<td><input type="text" name="coursename"></td>
+				<td><h2>Course Name</h2></td>
+				<td><input type="text" name="coursename" required autofocus></td>
 			</tr>
 			<tr>
-              <td><h3>Total Credit</h3></td>
-              <td><input type="number" name="totalcredit"></td>
+              <td><h2>Total Credit</h2></td>
+              <td><input type="number" name="totalcredit" required autofocus></td>
               </tr>
 			<tr>
-			<td ><input style="font-size:15px;color:blue" type="submit" value="SUBMIT"></td>
+			<td ><input style="font-size:20px;color:blue;font-style:italic" type="submit" value="SUBMIT" required></td>
 				</tr>
 		</table>
 	</form>

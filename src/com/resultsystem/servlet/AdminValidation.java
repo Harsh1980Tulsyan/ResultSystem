@@ -21,21 +21,21 @@ public class AdminValidation extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub												
 		response.setContentType("text/html");
 		PrintWriter out=response.getWriter();
 		String username=request.getParameter("username");
 		String password=request.getParameter("password");
 		if(username.equals("harsh@123") && password.equals("harsh123"))
 		{
-			 RequestDispatcher rd=request.getRequestDispatcher("/AdminLogin.jsp");  
+			 RequestDispatcher rd=request.getRequestDispatcher("/WelcomeAdmin.jsp");  
 	            rd.forward(request, response);  
 			
 		}
 		else
 		{
 			out.println("<h3>Enter valid Username and Password</h3>");
-			RequestDispatcher rd=request.getRequestDispatcher("/AdminValidate.jsp");  
+			RequestDispatcher rd=request.getRequestDispatcher("/AdminLogin.jsp");  
             rd.include(request, response);  
 		}
 		

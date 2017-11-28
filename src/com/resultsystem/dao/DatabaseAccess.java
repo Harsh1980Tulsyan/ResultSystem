@@ -2,37 +2,12 @@ package com.resultsystem.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 public class DatabaseAccess {
 	private Connection currcon;
-	String name,sub,username,password,coursecode,coursename,sname,srollno,sdateofbirth;
-	int credit;
-	public  DatabaseAccess(String name,String sub,String username,String password)
-	{
-		this.name=name;
-		this.sub=sub;
-		this.username=username;
-		this.password=password;
-	}
-	public  DatabaseAccess(String coursecode,String coursename,int credit)
-	{
-		this.coursecode=coursecode;
-		this.coursename=coursename;
-		this.credit=credit;
-	}
 	
-	public  DatabaseAccess(String sname,String srollno,String sdateofbirth)
-	{
-		this.sname=sname;
-		this.srollno=srollno;
-		this.sdateofbirth=sdateofbirth;
-	}
-	
-	
-	
-	
-	
-	public int addTeacher()
+	public int addTeacher(String name,String sub,String username,String password)
 	{
 		int p=0;
 		try
@@ -55,7 +30,7 @@ public class DatabaseAccess {
 	}
 	
 	
-	public int addSubject()
+	public int addSubject(String coursecode,String coursename,int credit)
 	{
 		int p=0;
 		
@@ -79,7 +54,7 @@ public class DatabaseAccess {
 	
 	
 	
-	public int addStudent()
+	public int addStudent( String sname,String srollno,String sdateofbirth)
 	{
 		int p=0;
 		
@@ -102,6 +77,39 @@ public class DatabaseAccess {
 	}
 	
 	
+	public ResultSet getTeacher()
+	{
+        ResultSet rs=null;
+		try {
+			
+			currcon=new Dbcon().getConnection();
+			PreparedStatement ps=currcon.prepareStatement("select * from ADD_TEACHER");
+			 rs=ps.executeQuery();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+		return rs;
+	}
+	
+	public ResultSet getStudent()
+	{
+        ResultSet rs=null;
+		try {
+			
+			currcon=new Dbcon().getConnection();
+			PreparedStatement ps=currcon.prepareStatement("select * from ADD_STUDENT");
+			 rs=ps.executeQuery();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+		return rs;
+	}
 	
 	
 	

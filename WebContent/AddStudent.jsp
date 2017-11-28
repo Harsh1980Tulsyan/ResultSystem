@@ -9,25 +9,25 @@
 <body>
 
 <div>
-		<h1 style="border:2px solid red;text-align:center">Add Student Details</h1>
+		<h1 style="border:2px solid red;text-align:center;background:pink">Add Student Details</h1>
 	</div>
 	<form method="post"action="AddStudent">
 		 <table style="color:red">
 			<tr>
-				<td><h3>Student name</h3></td>
-				<td><input type="text" name="studentname"></td>
+				<td><h2>Student name</h2></td> 
+				<td><input type="text" name="studentname" required autofocus></td>
 			</tr>
 			<tr>
-				<td><h3>Course Name</h3></td>
-				<td><input type="text" name="rollno"></td>
+				<td><h2>Roll No</h2></td>
+				<td><input type="text" name="rollno" required autofocus></td>
 			</tr>
 			<tr>
-              <td><h3>Date of Birth</h3></td>
-              <td><input type="date" name="dateofbirth"></td>
+              <td><h2>Date of Birth</h2></td>
+              <td><input type="date" name="dateofbirth" required autofocus></td>
               </tr>
 			<tr>
-			<td ><input style="font-size:15px;color:blue" type="submit" value="SUBMIT"></td>
-				</tr>
+			<td ><input style="font-size:20px;color:blue;font-style:italic" type="submit" value="SUBMIT" required ></td>
+			</tr>
 		</table>
 	</form>
 </body>

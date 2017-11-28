@@ -30,7 +30,7 @@ public class AddSubject extends HttpServlet {
 	    String coursename=request.getParameter("coursename");
 	    String credit=request.getParameter("totalcredit");
 	    int intcredit=Integer.parseInt(credit);
-   	    int p= new DatabaseAccess(coursecode,coursename,intcredit).addSubject();
+   	    int p= new DatabaseAccess().addSubject(coursecode,coursename,intcredit);
    	    if(p>0)
    	    {
    	    	out.println("<h1>Subject Added Sucessfully.</h1>");

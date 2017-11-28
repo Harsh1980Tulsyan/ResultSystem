@@ -7,29 +7,29 @@
 </head>
 <body>
 	<div>
-		<h1 style="border:2px solid red;text-align:center">Add Teacher Details</h1>
+		<h1 style="border:2px solid red;text-align:center;background:pink">Add Teacher Details</h1>
 	</div>
 	
 	<form method="post"action="AddTeacher">
 		 <table style="color:red">
 			<tr>
-				<td><h3>Name</h3></td>
-				<td><input type="text" name="name"></td>
+				<td><h2>Name</h2></td>
+				<td><input type="text" name="name" required autofocus></td>
 			</tr>
 			<tr>
-				<td><h3>Subject Assign</h3></td>
-				<td><input type="text" name="subject"></td>
+				<td><h2>Subject Assign</h2></td>
+				<td><input type="text" name="subject" required autofocus></td>
 			</tr>
 			<tr>
-              <td><h3>Username</h3></td>
-              <td><input type="text" name="username"></td>
+              <td><h2>Username</h2></td>
+              <td><input type="text" name="username" required autofocus></td>
               </tr>
 			<tr>
-				<td><h3>Password</h3></td>
-				<td><input type="password" name="password"></td>
+				<td><h2>Password</h2></td>
+				<td><input type="password" name="password" required autofocus></td>
 			</tr>
 			<tr>
-				<td ><input style="font-size:15px;color:blue" type="submit" value="SUBMIT"></td>
+				<td ><input style="font-size:20px;color:blue;font-style:italic" type="submit" value="SUBMIT" required ></td>
 				</tr>
 		</table>
 	</form>

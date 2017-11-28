@@ -29,7 +29,7 @@ public class AddStudent extends HttpServlet {
 		String name=request.getParameter("studentname");
 		String roll=request.getParameter("rollno");
 		String dateofbirth=request.getParameter("dateofbirth");
-		int p= new DatabaseAccess(name,roll,dateofbirth).addStudent();
+		int p= new DatabaseAccess().addStudent(name,roll,dateofbirth);
    	    if(p>0)
    	    {
    	    	out.println("<h1>Student Added Sucessfully.</h1>");
