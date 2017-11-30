@@ -30,7 +30,7 @@
 	<div style="text-align: center;">
 	<ul>
 		<li><a href="AdminLogin.jsp"><h2>Admin Login</h2></li>
-		<li><a href="#"><h2>Student's Login</h2></a></li>
+		<li><a href="StudentLogin.jsp"><h2>Student's Login</h2></a></li>
 		<li><a href="TeacherLogin.jsp"><h2>Teacher's Login</h2></a></li>
 	</ul>
 	</div>

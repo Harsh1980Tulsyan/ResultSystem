@@ -14,18 +14,24 @@
  table, td, th {
     border: 1px solid black;
 }
+input{
+border:none;}
 </style>
 <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
 <script  type="text/javascript" src="script.js"></script>
 </head>
 <body>
+<%
+String subject=request.getParameter("subject");
+%>
+<h1 style="text-align:center">ENTER  <%=subject %>  MARKS</h1>
+<a href="WelcomeTeacher.jsp"><h3 style="text-align:left;">Home</h3></a>
 <table>
 <tr>
-<th>Name</th><th>Roll No</th><th>Test 1 Marks</th>
+<th>Name</th><th>Roll No</th><th>Marks</th>
 </tr>
 <form type="post" action="AddMarks">
 <%
-String subject=request.getParameter("subject");
 ResultSet rs=new DatabaseAccess().getStudent();
 while(rs.next())
 {
@@ -43,6 +49,5 @@ while(rs.next())
 <input id="button" type="button" value="SUBMIT">
 <input id="svalue" type="hidden" value=<%=subject%>>
 </form>
-<div id="div"></div>
 </body>
 </html>

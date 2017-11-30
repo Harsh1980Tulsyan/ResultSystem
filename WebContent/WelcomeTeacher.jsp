@@ -22,19 +22,7 @@
 
 	</style>
 </head>
-<body>
-
-<%
-HttpSession s=request.getSession(false);  
-if(s==null)
-{
-	  RequestDispatcher rd=request.getRequestDispatcher("/TeacherLogin.jsp");  
-      rd.forward(request, response); 
-}
-	
-String coursecode=(String)s.getAttribute("coursecode");  
-%>
-   <h1><%=coursecode%></h1>
+ <body>
 	<div class="head">
         <h1 style="color: #E74C3C; text-align:center;">Teacher Portal</h1>
         <a href="Logout"><h2 style="color: #E74C3C; text-align:right;">LOGOUT </h2></a>
@@ -48,6 +36,7 @@ String coursecode=(String)s.getAttribute("coursecode");
 		<li><a href="AddMarks.jsp?subject=ATTENDENCE"><h2>Add Attendence</h2></a></li>
 		<li><a href="AddMarks.jsp?subject=QUIZ"><h2>Add Quiz Marks</h2></a></li>
 		<li><a href="AddMarks.jsp?subject=ASSIGNMENT"><h2>Add Assignment Marks</h2></a></li>
+		<li><a href="CalculateGrade"><h2>Show Final Grade</h2></a></li>
 	</ul>
 	</div>
 
