@@ -14,17 +14,18 @@
  table, td, th {
     border: 1px solid black;
 }
-input{
- border:none;
-}
 </style>
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script  type="text/javascript" src="script.js"></script>
 </head>
 <body>
 <table>
 <tr>
 <th>Name</th><th>Roll No</th><th>Test 1 Marks</th>
 </tr>
+<form type="post" action="AddMarks">
 <%
+String subject=request.getParameter("subject");
 ResultSet rs=new DatabaseAccess().getStudent();
 while(rs.next())
 {
@@ -32,13 +33,16 @@ while(rs.next())
 	String roll=rs.getString(2);
 %>
 <tr>
-<td><%=name%></td><td><%=roll%></td><td><input type="text"></td>
+<td><%=name%></td><td ><%=roll%></td><td><input type="text" name="<%=roll%>"></td>
 </tr>	
 <%
 }
 %>
 </table>
 <br><br><br>
-<input           type="submit" value="SUBMIT" >
+<input id="button" type="button" value="SUBMIT">
+<input id="svalue" type="hidden" value=<%=subject%>>
+</form>
+<div id="div"></div>
 </body>
 </html>

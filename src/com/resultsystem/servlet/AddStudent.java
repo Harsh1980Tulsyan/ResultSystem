@@ -33,7 +33,7 @@ public class AddStudent extends HttpServlet {
    	    if(p>0)
    	    {
    	    	out.println("<h1>Student Added Sucessfully.</h1>");
-   	        RequestDispatcher rd=request.getRequestDispatcher("/AdminLogin.jsp");  
+   	        RequestDispatcher rd=request.getRequestDispatcher("/WelcomeAdmin.jsp");  
             rd.include(request, response);  
    	    }
    	    else
