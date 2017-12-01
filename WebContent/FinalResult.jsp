@@ -59,6 +59,7 @@ catch(Exception e)
 </tr>
 <%
 int gradepoint=0,totalpoint=0;
+int flag=1;
 float credit=0;
 String[] coursecode={"EC501","EC502","EC503","EC504","EC505"};
 
@@ -118,6 +119,8 @@ while(rs.next())
 	{
 		totalpoint+=(5)*gradepoint;
 	}
+	else if(rs.getString(9).equals("F"))
+		flag=0;
 	
 		%>
 <th><%=rs.getInt(3) %></th>
@@ -137,9 +140,16 @@ catch(Exception e)
 }
 }
 DecimalFormat df2 = new DecimalFormat(".##");
-float cgpa=(totalpoint/credit);
+float  cgpa;
+if(flag==0)
+	cgpa=0;
+else
+ cgpa=(totalpoint/credit);
 %>
 </table>
 <h3 style="color:blue;text-align:center">CGPA:<%=df2.format(cgpa)%></h3>
+<%
+s.invalidate();
+%>
 </body>
 </html>

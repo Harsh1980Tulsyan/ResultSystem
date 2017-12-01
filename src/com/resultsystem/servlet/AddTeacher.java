@@ -30,7 +30,8 @@ public class AddTeacher extends HttpServlet {
 	    String sub=request.getParameter("subject");
 	    String username=request.getParameter("username");
 	    String password=request.getParameter("password");
-   	    int p= new DatabaseAccess().addTeacher(name,sub,username,password);
+	    String coursecode=request.getParameter("coursecode");
+   	    int p= new DatabaseAccess().addTeacher(name,sub,username,password,coursecode);
    	    if(p>0)
    	    {
    	    	out.println("<h1>Teacher Added Sucessfully.</h1>");

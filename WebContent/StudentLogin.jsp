@@ -18,8 +18,7 @@
 				<td><h2 style="color: red">Roll No</h2></td>
 				<td><input type="password" name="rollno" required autofocus></td>
 			</tr>
-			<tr> <td><input style="color:blue;font-size:20px;font-style:italic" type="submit" value="LOGIN" required ></td></tr>
+			<tr> <td><input style="color:blue;font-size:20px;font-style:italic"  id="submit" type="submit" value="LOGIN" required ></td></tr>
 		</table></form>
-
 </body>
 </html>

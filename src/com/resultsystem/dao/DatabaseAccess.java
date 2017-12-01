@@ -9,17 +9,18 @@ import javax.servlet.http.HttpSession;
 public class DatabaseAccess {
 	private Connection currcon;
 	
-	public int addTeacher(String name,String sub,String username,String password)
+	public int addTeacher(String name,String sub,String username,String password,String coursecode)
 	{
 		int p=0;
 		try
 		{
 		currcon=new Dbcon().getConnection();
-		PreparedStatement ps=currcon.prepareStatement("insert into Add_TEACHER values(?,?,?,?)");
+		PreparedStatement ps=currcon.prepareStatement("insert into Add_TEACHER values(?,?,?,?,?)");
 		ps.setString(1, name);
 		ps.setString(2, sub);
 		ps.setString(3, username);
 		ps.setString(4, password);
+		ps.setString(5, coursecode);
 		p=ps.executeUpdate();
 		currcon.close();
 		}

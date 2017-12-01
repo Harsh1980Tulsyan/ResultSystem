@@ -29,6 +29,10 @@
 				<td><input type="password" name="password" required autofocus></td>
 			</tr>
 			<tr>
+				<td><h2>Course Code</h2></td>
+				<td><input type="text" name="coursecode" required autofocus></td>
+			</tr>
+			<tr>
 				<td ><input style="font-size:20px;color:blue;font-style:italic" type="submit" value="SUBMIT" required ></td>
 				</tr>
 		</table>
